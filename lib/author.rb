@@ -20,6 +20,7 @@ class Author
     post.author = self #to make sure? / capital
   end
 
+
   def add_post_by_title(title)
     post = Post.new(title)
     @posts << post
