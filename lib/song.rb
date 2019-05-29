@@ -1,13 +1,10 @@
-require 'pry'
-class Song 
-
+class Song
     attr_accessor :name, :artist
 
     @@all = []
 
     def initialize(name)
         @name = name
-        @artist = artist
         @@all << self
     end 
 
@@ -15,20 +12,7 @@ class Song
         @@all
     end 
 
-    def name
-        @name
-    end 
-
     def artist_name
-       if self.artist
-        self.artist.name
-        #binding.pry
-       else
-        nil
-       end 
-
-    end
-
-
-
+        artist.name if artist
+    end 
 end 
